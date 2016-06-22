@@ -43,28 +43,45 @@ body acceleration.
 - An identifier of the subject who carried out the experiment.
 
 Process for re-running script:
+
 Set your working directory to the parent location of "UCI HAR Dataset"
+
 Data is imported and given the headers from the features.txt file
+
 Columns that do not involve mean or standard deviation are eliminated
+
 The test and train data is merged
+
 Added in the data group(train or test), subject numbers and activity names into the data sets
+
 Average data is calculated through aggregating the subjects and activities
 
 
 SensorData is all of the outputs of the combined data sets of test and training
+
 	$group is the testing group, whether it is the "test" or "train" group of the study
+
 	$activity is the type of activity the subject is performing
+
 	$subject is the identifier for the individual performing the tasks (1-30)
 	
 AverageData is the averaged data for each variable for one subject performing each task
 	
 Variables
-	^f*	data in the frequency domain
-	^t*	data in the time domain
-	*Acc*	accelerometer data
-	*Gravity*	force of gravity data
-	*Gyro*	gyroscope data
-	*X|Y|Z$	the output direction
-	*Mean* is the average data of the data set
-	*Std* is the standard deviation of the data set
+
+^f*	data in the frequency domain
+
+^t*	data in the time domain
+
+*Acc*	accelerometer data
+
+*Gravity*	force of gravity data
+
+*Gyro*	gyroscope data
+
+*X|Y|Z$	the output direction
+
+*Mean* is the average data of the data set
+
+*Std* is the standard deviation of the data set
 	
