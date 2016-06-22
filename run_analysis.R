@@ -48,6 +48,8 @@ names(sensorData)=gsub("[Ss]td","Std",names(sensorData))
 averageData=aggregate(. ~ activity + subjects, sensorData, mean, na.rm = TRUE)
 temp=sapply(averageData$group,switch,'1'='train', "2"="test")
 averageData= replace(averageData,"group",temp)  
+write.table(sensorData, file = "./tidySensorData.txt",row.names = FALSE)
+write.table(averageData, file = "./tidyAverageData.txt",row.names = FALSE)
 
 #Cleaning up global environment
 rm(activityTest,activityTrain,subjectsTest
